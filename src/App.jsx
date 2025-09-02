@@ -27,7 +27,7 @@ const App = () => {
     // Define API data
     const BASE_API_URL = "https://api.themoviedb.org/3/";
     const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-    const endpoint = `${BASE_API_URL}/search/movie?query=${query}`;
+    const endpoint = query ? `${BASE_API_URL}/search/movie?query=${query}` : `${BASE_API_URL}/discover/movie`;
 
     const API_OPTIONS = {
       method: "GET",
